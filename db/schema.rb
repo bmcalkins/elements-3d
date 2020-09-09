@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_08_231325) do
+ActiveRecord::Schema.define(version: 2020_09_09_205614) do
 
   create_table "elements", force: :cascade do |t|
     t.string "name"
-    t.string "symbol"
     t.decimal "atomic_mass"
+    t.string "symbol"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

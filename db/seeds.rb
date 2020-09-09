@@ -5,12 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
 Element.destroy_all
 
 require 'rest-client'
 require 'json'
 
-base_url = "https://github.com/Bowserinator/Periodic-Table-JSON/blob/master/PeriodicTableJSON.json"
+
+base_url = "https://neelpatel05.pythonanywhere.com/"
 data = RestClient.get(base_url)
 parsed_data = JSON.parse(data)
 
@@ -18,5 +20,7 @@ parsed_data = JSON.parse(data)
 
 
 parsed_data.map do |element|
-    Element.create(name: element["name"], atomic_mass: element["atomic_mass"], symbol: element["symbol"])
+   Element.create(name: element["name"], atomic_mass: element["atomicMass"], symbol: element["symbol"]) 
 end
+
+

@@ -2,10 +2,10 @@
 
 one:
   name: MyString
-  symbol: MyString
   atomic_mass: 9.99
+  symbol: MyString
 
 two:
   name: MyString
-  symbol: MyString
   atomic_mass: 9.99
+  symbol: MyString

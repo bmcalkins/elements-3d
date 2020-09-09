@@ -1,7 +1,6 @@
 class ElementsController < ApplicationController
-
     def index
-        @elements = Element.all.sample(1)
+        @elements = Element.all
 
         render json: @elements 
     end
@@ -11,5 +10,4 @@ class ElementsController < ApplicationController
 
         render json: @element
     end
-
 end
